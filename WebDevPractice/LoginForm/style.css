@@ -1,0 +1,105 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold"); 
+
+/* Universal Box-Sizing and Reset */
+*,
+*::before, /* Include pseudo-elements for box-sizing */
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base HTML and Body Styles */
+html, body {
+    height: 100vh;
+    width: 100vw; /* Use 100% for body to be safer with scrollbars, but 100vw is okay if no horizontal scroll */
+    font-family: "Gilroy-Light", sans-serif; /* Prefer a specific fallback like Arial, Helvetica */
+    overflow-x: hidden; /* Prevent horizontal scrollbar issues */
+}
+
+/* Main Container for Centering */
+main {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #111, #1a1a1a); /* Consistent dark gradient */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    padding: 20px; /* Add some padding to prevent card sticking to edges on small screens */
+}
+
+/* Login Card Styling */
+#login-card {
+    background-color: #e3e3e3;
+    border-radius: 10px; /* Slightly more rounded corners for modern look */
+    color: #333; /* Darker text for better contrast */
+    padding: 40px; /* Increase padding for more breathing room */
+    width: clamp(280px, 90vw, 380px); /* Responsive width: min 280px, max 380px, scales with viewport width */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    position: relative; /* For potential future pseudo-elements or absolute positioning */
+    overflow: hidden; /* Ensure nothing spills out of rounded corners */
+}
+
+#login-card h1 {
+    text-align: center;
+    margin-bottom: 30px; /* More space below heading */
+    font-size: 2.2em; /* Slightly larger heading */
+    color: #000; /* Strong black for heading */
+    font-family: "Gilroy-Bold", sans-serif; /* Use bold font for heading */
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Field Styling */
+input {
+    margin-bottom: 20px; /* Increased margin below inputs */
+    padding: 12px 15px; /* More padding for bigger touch targets and better appearance */
+    width: 100%;
+    border-radius: 8px; /* Slightly more rounded input fields */
+    border: 1px solid #ccc; /* Subtle border */
+    font-size: 1em; /* Readable font size */
+    outline: none; /* Remove default blue/black outline on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus states */
+    background-color: #f0f0f0; /* Light background for inputs */
+    color: #333;
+}
+
+input::placeholder {
+    color: #888; /* Softer placeholder text color */
+}
+
+input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Subtle glow on focus */
+    background-color: #fff; /* White background on focus */
+}
+
+/* Button Styling */
+button {
+    background-color: #000; /* Black background for the button */
+    color: white;
+    padding: 12px 20px; /* More padding for a substantial button */
+    border-radius: 8px; /* Consistent rounded corners */
+    border: none; /* Remove default button border */
+    font-size: 1.1em; /* Slightly larger text for buttons */
+    cursor: pointer; /* Indicate clickable element */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and active effects */
+    font-family: "Gilroy-SemiBold", sans-serif; /* Use a bolder font for button text */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    margin-top: 10px; /* Add space above the button */
+}
+
+button:hover {
+    background-color: #333; /* Darker grey on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+button:active {
+    background-color: #555; /* Even darker grey on click */
+    transform: translateY(0); /* Reset lift effect on active */
+}
+
