@@ -135,3 +135,108 @@
   background: #055a8c;
 }
 
+/* Variation 3: Dropdown Menu */
+.nav3 {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.nav3 ul {
+    gap: 30px;
+}
+
+.nav3 li {
+    position: relative;
+}
+
+.nav3 a {
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.nav3 a:hover {
+    background: rgb(9, 108, 189);
+    color: #fff;
+}
+
+.nav3 #drop > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+    color: #555;
+    transition: color 0.2s;
+}
+
+.nav3 #drop > a:hover::after {
+    color: #fff;
+}
+
+.nav3 #dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 160px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 6px;
+    z-index: 10;
+    padding: 8px 0;
+}
+
+.nav3 #drop:hover #dropdownMenu,
+.nav3 #drop:focus-within #dropdownMenu {
+    display: block;
+}
+
+.nav3 #dropdownMenu li {
+    width: 100%;
+}
+
+.nav3 #dropdownMenu a {
+    color: #222;
+    background: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 0;
+    font-size: 18px;
+}
+
+.nav3 #dropdownMenu a:hover {
+    background: rgb(9, 108, 189);
+    color: #fff;
+}
+.nav3{
+    padding: 10px;
+    position: relative;
+
+}
+
+.nav3 ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.nav3 a{
+     text-decoration: none;
+     color: #000;
+     font-size: 20px;
+     font-family: 'Gilroy-Bold';
+}
+
+.nav3 #dropdownMenu{
+    display: none;
+}
+
+.nav3 #drop:hover #dropdownMenu{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    color: #fff;
+}
